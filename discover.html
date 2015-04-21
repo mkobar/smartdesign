@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
+        <script>
+			var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+	        if(is_chrome){
+			  document.write('<meta http-equiv="X-UA-Compatible" content="chrome=1">');
+			}
+        </script>
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon-114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon-72.png">
+		<link rel="apple-touch-icon-precomposed" href="favicon-57.png">
+		<link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/powerange.css">
+        <style type="text/css">
+        	input[type=checkbox].css-checkbox {
+					position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+				}
+			input[type=checkbox].css-checkbox + label.css-label, input[type=checkbox].css-checkbox + label.css-label.clr {
+				padding-left:52px;
+				height:32px; 
+				display:inline-block;
+				line-height:32px;
+				background-repeat:no-repeat;
+				background-position: 0 0;
+				font-size:24px;
+				vertical-align:middle;
+				cursor:pointer;
+				margin-bottom:20px;
+			}
+			input[type=checkbox].css-checkbox:checked + label.css-label, input[type=checkbox].css-checkbox + label.css-label.chk {
+				background-position: 0 -32px;
+			}
+			label.css-label {
+				background-image:url(images/discover/checkbox.png);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+        </style>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+    	<div class="container">
+        	<div class="overlay"></div>
+            <div id="filter">
+            	<h3>Filter Options</h3>
+                <h4>Price ($)</h4>
+                <div class="slider-wrapper">
+                    <input type="text" class="price" />
+                </div>
+                <div class="text">
+                	<span>1</span>
+                    <span>5</span>
+                    <span>10</span>
+                    <span>20</span>
+                    <span>30</span>
+                    <span>40</span>
+                    <span>50</span>
+                    <span>100+</span>
+                </div>
+                <h4>Distance (mile)</h4>
+                <div class="slider-wrapper">
+                    <input type="text" class="distance" />
+                </div>
+                <div class="text">
+                	<span>0</span>
+                    <span>0.1</span>
+                    <span>0.3</span>
+                    <span>0.5</span>
+                    <span>1</span>
+                    <span>3</span>
+                    <span>5</span>
+                    <span>10+</span>
+                </div>
+                <h4>Cuisines</h4>
+                <p>
+                    <input type="checkbox" name="American" id="American" class="css-checkbox" /><label for="American" class="css-label radGroup1">American</label><br/>
+                    <input type="checkbox" name="Burgers" id="Burgers" class="css-checkbox" /><label for="Burgers" class="css-label radGroup1">Burgers</label><br/>
+                    <input type="checkbox" name="Chinese" id="Chinese" class="css-checkbox" /><label for="Chinese" class="css-label radGroup1">Chinese</label><br/>
+                    <input type="checkbox" name="Deli" id="Deli" class="css-checkbox" /><label for="Deli" class="css-label radGroup1">Deli</label><br/>
+                    <input type="checkbox" name="Korean" id="Korean" class="css-checkbox" /><label for="Korean" class="css-label radGroup1">Korean</label><br/>
+                    <input type="checkbox" name="Japanese" id="Japanese" class="css-checkbox" /><label for="Japanese" class="css-label radGroup1">Japanese</label><br/>
+                    <input type="checkbox" name="Vegan" id="Vegan" class="css-checkbox" /><label for="Vegan" class="css-label radGroup1">Vegan</label><br/>
+                    <a href="#see-more" class="see-more">See More...</a>
+                </p>
+            </div>
+        	<header>
+            	<h1>Discover</h1>
+                <a href="#menu" class="menu"></a>
+            </header>
+            <section class="discover">
+                <div class="rating r2"></div>
+            	<img src="images/discover/discover-img.png" alt="" title="" >
+                <h3>Mexican Cuisine</h3>
+                <p>Average Price<span class="right">$11</span></p>
+                <p>Distance<span class="right">0.5 mile</span></p>
+                <div class="column2">
+                	<a href="#filter"><div class="filter">Filter Options</div></a>
+                </div>
+                <div class="column2">
+                    <a href="#get-now"><div class="get-now">Get Now</div></a>
+                </div>
+            </section>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/jspatch.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script src="js/powerange.js"></script>
+        <script>
+			var price = document.querySelector('.price');
+		    var initHideRange = new Powerange(price, { hideRange: true, start: 70 });
+			var distance = document.querySelector('.distance');
+		    var initHideRange = new Powerange(distance, { hideRange: true, start: 70 });
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

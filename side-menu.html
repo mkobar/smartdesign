@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
+        <script>
+			var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+	        if(is_chrome){
+			  document.write('<meta http-equiv="X-UA-Compatible" content="chrome=1">');
+			}
+        </script>
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon-114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon-72.png">
+		<link rel="apple-touch-icon-precomposed" href="favicon-57.png">
+		<link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/powerange.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+    	<div class="container">
+        	<div id="menu">
+            	<div class="img-cont">
+            		<img src="images/profile/profile.png">
+                	<h3>Ashley Warren</h3>
+                </div>
+                <ul>
+                	<li>
+                    	<a href="#" class="discover"><span>Discover</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="profile"><span>Profile</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="my-favorites"><span>My Favorites</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="friends"><span>Friends</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="setting"><span>Settings</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="help"><span>Help</span></a>
+                    </li>
+                </ul>
+            </div>
+        	<header>
+            	<h1>Discover</h1>
+                <a href="#menu" class="menu"></a>
+            </header>
+            <section class="discover">
+                <div class="rating r2"></div>
+            	<img src="images/discover/discover-img.png" alt="" title="" >
+                <h3>Mexican Cuisine</h3>
+                <p>Average Price<span class="right">$11</span></p>
+                <p>Distance<span class="right">0.5 mile</span></p>
+                <div class="column2">
+                	<a href="#filter"><div class="filter">Filter Options</div></a>
+                </div>
+                <div class="column2">
+                    <a href="#get-now"><div class="get-now">Get Now</div></a>
+                </div>
+            </section>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/jspatch.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script src="js/powerange.js"></script>
+        <script>
+			var price = document.querySelector('.price');
+		    var initHideRange = new Powerange(price, { hideRange: true, start: 70 });
+			var distance = document.querySelector('.distance');
+		    var initHideRange = new Powerange(distance, { hideRange: true, start: 70 });
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

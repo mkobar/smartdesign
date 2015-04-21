@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
+        <script>
+			var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+	        if(is_chrome){
+			  document.write('<meta http-equiv="X-UA-Compatible" content="chrome=1">');
+			}
+        </script>
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon-114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon-72.png">
+		<link rel="apple-touch-icon-precomposed" href="favicon-57.png">
+		<link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+    	<div class="container">
+        	<header>
+            	<h1>My Favorites</h1>
+                <a href="#menu" class="menu"></a>
+            </header>
+            <section class="restaurant">
+            	<img src="images/restaurant/restaurant-img.png" alt="" title="" >
+                <h2>Cafe Village</h2>
+                <div class="star s3"></div>
+                <h3>Average Price $10-15</h3>
+                <p>The perfect place for breakfast and brunch. The famous breakfast platter is the cafe’s specialty menu. </p>
+                
+                <h3>Basic Info</h3>
+                <p>American Breakfast<br/>
+                Open 6:00AM - 10:00PM<br/>
+                1.2 miles away</p>
+
+				<address>2089 The Alameda<br/>
+				San Jose, CA 95126</address>
+            </section>
+            <section class="map-cont">
+            	<div id="map" data-lng="-73.97968" data-lat="40.7056258"></div>
+                <a href="" class="button">Directions</a>
+                <a href="" class="button">Make Reservation</a>
+                <a href="" class="button">Get Delivery</a>
+                <a href="" class="button">Invite Friends for Meal</a>
+                <a href="" class="button">Save Restaurant</a>
+            </section>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/jquery.lazy-load-google-maps.min.js"></script>
+        <script>
+			;( function( $, window, document, undefined )
+			{
+				$( '#map' ).lazyLoadGoogleMaps(
+				{
+					callback: function( container, map )
+					{
+						var $container  = $( container ),
+							center      = new google.maps.LatLng( $container.attr( 'data-lat' ), $container.attr( 'data-lng' ) );
+		 
+						map.setOptions({ zoom: 15, center: center });
+						new google.maps.Marker({ position: center, map: map });
+					}
+				});
+		 
+			})( jQuery, window, document );
+		</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
